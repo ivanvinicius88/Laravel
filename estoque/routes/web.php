@@ -16,9 +16,8 @@ Route::get('/', function () {
 });
 
 Route::get('/sobre', function () {
-    return "primeira rota com laravel";
+    return "Primeira rota com Laravel";
 });
 
-//Route::get('/sobre', function () {
-   // return "primeira rota com laravel";
-//});
+Route::get('/produtos', "ProdutoController@lista");
+
