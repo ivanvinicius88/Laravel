@@ -19,34 +19,13 @@
 
   </head>
   <body style="background-color:#FFFFF0;">
-  <div class="container">
-  <h1 class="text-center my-5">Listagem de produtos</h1><br>
-        <table class="table table-striped table-bordered">
-            <tr>
-                <td class="text-center h6">Nome</td>
-                <td class="text-center h6">Valor</td>
-                <td class="text-center h6">Descrição</td>
-                <td class="text-center h6">Quantidade</td>
-                <td class="text-center h6">Pesquisar</td>
-            </tr>
-            <?php foreach ($produtos as $p): ?>
-                <tr>
-                <td class="text-center"><?= $p->nome ?></td>
-                <td class="text-center"><?= $p->valor ?></td>
-                <td class="text-center"><?= $p->descricao ?></td>
-                <td class="text-center"><?= $p->quantidade ?></td>
-                <td class="text-center"><a  href="/produtos/mostra/id<?=$p->id?>"><i class="fas fa-search mx-2 "></i></a></td>
-                                                            <!--mostra?id-->
-                </tr>
-            <?php endforeach ?>
-        </table>
-
-
-
-
-
-
-
+    <div class="container">
+        <h1 class="text-center my-5">Detalhes do produtos <?=$p->nome?></h1><br>
+        <ul>
+            <li>Valor: <?=$p->valor?> </li>
+            <li>Descrição: <?=$p->descricao?> </li>
+            <li>Quantidade: <?=$p->quantidade?> </li>
+        </ul>
     </div>
  </body>
 </html>
