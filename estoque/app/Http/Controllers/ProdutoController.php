@@ -12,7 +12,7 @@ class ProdutoController extends Controller {
 
         $produtos = DB::select('select * from produtos');
 
-        return view('produtos-listagem')->with('produtos', $produtos);
+        return view('produto.listagem')->with('produtos', $produtos);
     }
 
 
@@ -20,6 +20,6 @@ class ProdutoController extends Controller {
         //$id = Request::input('id', '1');
         $id = Request::route('id', '1');
         $resposta = DB::select('select * from produtos where id = ?', [$id]);
-        return view('produto-mostra')->with('p', $resposta[0]);
+        return view('produto.mostra')->with('p', $resposta[0]);
         }
 }
