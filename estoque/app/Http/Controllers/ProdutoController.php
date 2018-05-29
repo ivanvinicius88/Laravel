@@ -19,11 +19,28 @@ class ProdutoController extends Controller {
     public function mostra(){
         //$id = Request::input('id', '1');
         $id = Request::route('id', '1');
+
         $resposta = DB::select('select * from produtos where id = ?', [$id]);
+        
         return view('produto.mostra')->with('p', $resposta[0]);
         }
 
-        public function novo(){
-            return view('produto.formulario');
-        }          
+    public function novo(){
+         return view('produto.formulario');
+    }
+    
+    public function adiciona() {
+         $nome = Request::input('nome');
+         $valor = Request::input('valor');
+         $descricao = Request::input('descricao');
+         $quantidade = Request::input('quantidade');
+
+         DB::table('produtos')->insert([ 'nome' => $nome, 'valor' => $valor, 'descricao' => $descricao, 'quantidade' => $quantidade]);
+        
+         return view('produto.adicionado')->with('nome', $nome);
+    }         
+    
+
+
+
 }
