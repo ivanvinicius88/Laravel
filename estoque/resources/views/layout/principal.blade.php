@@ -20,12 +20,25 @@
   </head>
   <body style="background-color:#FFFFF0;">
 
+
+
+  
+          <ul class="nav navbar-nav navbar-top bg-dark navbar-dark fixed-top  navbar-collapse" id="navbarSite">
+            <li class="nav-item">
+              <a class="nav-link" href="/produtos">Listagem</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/produtos/novo">Novo</a>
+            </li>
+          </ul>
+
+  
+   
+
+
+
     <div class="container">
 
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="/produtos"></a>Listagem</li>
-        <li><a href="/produtos/novo">Novo</a></li>
-      </ul>
 
         @yield('conteudo')
         

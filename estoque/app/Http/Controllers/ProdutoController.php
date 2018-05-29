@@ -35,9 +35,9 @@ class ProdutoController extends Controller {
          $descricao = Request::input('descricao');
          $quantidade = Request::input('quantidade');
 
-         DB::table('produtos')->insert([ 'nome' => $nome, 'valor' => $valor, 'descricao' => $descricao, 'quantidade' => $quantidade]);
+         DB::table('produtos')->insert([ 'nome' => $prnome, 'valor' => $prvalor, 'descricao' => $prdescricao, 'quantidade' => $prquantidade]);
         
-         return view('produto.adicionado')->with('nome', $nome);
+         return view('produto.adicionado')->with('nome', $prnome);
     }         
     
 

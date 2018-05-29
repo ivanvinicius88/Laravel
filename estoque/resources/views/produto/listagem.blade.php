@@ -2,6 +2,9 @@
 @extends('layout/principal')
 
   @section('conteudo')
+  <br>
+  <br>
+  <br>
   <h1 class="text-center my-5">Listagem de produtos</h1><br>
         <table class="table table-striped table-bordered">
             <tr>
