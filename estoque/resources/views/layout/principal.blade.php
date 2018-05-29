@@ -19,15 +19,16 @@
 
   </head>
   <body style="background-color:#FFFFF0;">
+
     <div class="container">
-  
+
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/produtos"></a>Listagem</li>
+        <li><a href="/produtos/novo">Novo</a></li>
+      </ul>
 
         @yield('conteudo')
-
-
-
-
-
+        
     </div>
  </body>
 </html>

@@ -22,4 +22,8 @@ class ProdutoController extends Controller {
         $resposta = DB::select('select * from produtos where id = ?', [$id]);
         return view('produto.mostra')->with('p', $resposta[0]);
         }
+
+        public function novo(){
+            return view('produto.formulario');
+        }          
 }
