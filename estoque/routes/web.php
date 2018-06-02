@@ -16,12 +16,19 @@ Route::get('/', function () {
 });
 
 Route::get('/sobre', function () {
-    return "Primeira rota com Laravel";
+    return "Welcome";
 });
 
-Route::get('/produtos', "ProdutoController@lista");
+Route::get('/produtos', 'ProdutoController@lista');
 
-Route::get('/produtos/mostra/{id}', "ProdutoController@mostra");
+// Route::get('/produtos/mostra', 'ProdutoController@mostra');
+// Route::get('/produtos/mostra/{id}', 'ProdutoController@mostra');
+// ensinando a url
+Route::get(
+    '/produtos/mostra/{id}',
+    'ProdutoController@mostra'
+    )
+    ->where('id', '[0-9]+');
 
 Route::get('/produtos/novo', 'ProdutoController@novo');
 

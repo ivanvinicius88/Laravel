@@ -1,38 +1,39 @@
-@extends('layout.principal')
+@extends('layout/principal')
 
 @section('conteudo')
 
 <br>
-<br>
-<br>
-<div class="container my-5">
-<hr>
-    <h1 class="my-2">Cadastrar Novo produto</h1>
-    <form method="#" action="produtos/adiciona">
+<div class="container ">   
+    <br>
+    <h1 class="mt-5 mb-4 text-center">Novo produto</h1>
+    <hr>
+    <form action="/produtos/adiciona">
         <div class="form-row">
-            <div class="form-group mx-4 col-md-4">
+            <div class="form-group">
                 <label>Nome</label>
-                <input id="#" name="prnome" class="form-control">
-            </div>
-
-            <div class="form-group col-md-4">
+                <input name="nome" class="form-control " type="text" />
+            </div>    
+            <div class="form-group">        
                 <label>Descricao</label>
-                <input id="#" name="prdescricao" class="form-control">
+                <input name="descricao" class="form-control mx-1 " type="text"/>
             </div>
-        </div>
-        <div class="form-row mb-5">
-            <div class="form-group mx-4 col-md-3">
+        </div>       
+        <div class="form-row">
+            <div class="form-group">
                 <label>Valor</label>
-                <input id="#" name="prvalor" class="form-control">
+                <input name="valor" class="form-control col-md-7" type="text" />
             </div>
-
-            <div class="form-group col-md-1">
+            <div class="form-group">    
                 <label>Quantidade</label>
-                <input id="#" name="prquantidade"  class="form-control">
+                <input name="quantidade" class="form-control mx-1 col-md-5" type="number"/>
+            </div>
+        </div>        
+        <div class="form-row">
+            <div class="form-group">
+                <button class="btn btn-success" name="enviar" type="submit">Enviar</button>
+                <button class="btn btn-danger" name="apagar" type="reset">Apagar</button>
             </div>
         </div>
-
-        <button type="submit" class="btn btn-primary mx-4">Enviar</button>
-        <button type="reset" class="btn btn-danger">Limpar</button>
     </form>
+
 </div>

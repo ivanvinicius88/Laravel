@@ -1,6 +1,6 @@
 <?php
 
-namespace estoque\Http\Middleware;
+namespace newEstoque\Http\Middleware;
 
 use Closure;
 use Illuminate\Support\Facades\Auth;

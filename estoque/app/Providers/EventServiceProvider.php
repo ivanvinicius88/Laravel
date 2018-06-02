@@ -1,6 +1,6 @@
 <?php
 
-namespace estoque\Providers;
+namespace newEstoque\Providers;
 
 use Illuminate\Support\Facades\Event;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
@@ -13,8 +13,8 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'estoque\Events\Event' => [
-            'estoque\Listeners\EventListener',
+        'newEstoque\Events\Event' => [
+            'newEstoque\Listeners\EventListener',
         ],
     ];
 

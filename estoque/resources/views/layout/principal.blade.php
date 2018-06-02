@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="{{ app()->getLocale() }}">
   <head>
@@ -16,32 +15,31 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
     <title>Laravel</title>
-
   </head>
-  <body style="background-color:#FFFFF0;">
 
-
-
-  
-          <ul class="nav navbar-nav navbar-top bg-dark navbar-dark fixed-top  navbar-collapse" id="navbarSite">
-            <li class="nav-item">
-              <a class="nav-link" href="/produtos">Listagem</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/produtos/novo">Novo</a>
-            </li>
-          </ul>
-
-  
-   
-
-
+  <body style="background-color: #FFF !important;">
 
     <div class="container">
+     
+      <nav class="navbar navbar-default fixed-top bg-dark">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="/sobre">Menu Principal </a>
+          </div>
+          <div class="nav navbar-nav "> 
+              <a class="navbar-brand" href="/produtos/novo">Novo</a>
+           </div>
+          <div class="nav navbar-nav "> 
+              <a class="navbar-brand" href="/produtos">Listagem</a>
+           </div>
+        </div>
+      </nav>
+      <br>
+      <br>
+      
+      @yield('conteudo')
 
-
-        @yield('conteudo')
-        
     </div>
+   
  </body>
 </html>

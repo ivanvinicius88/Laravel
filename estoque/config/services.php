@@ -30,7 +30,7 @@ return [
     ],
 
     'stripe' => [
-        'model' => estoque\User::class,
+        'model' => newEstoque\User::class,
         'key' => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],
