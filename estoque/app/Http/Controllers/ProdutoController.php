@@ -29,15 +29,17 @@ class ProdutoController extends Controller {
     public function adiciona(){
         // pegar dados do formulario
         $nome = Request::input('nome');
-        $descricao = Request::input('descricao');
         $valor = Request::input('valor');
+        $descricao = Request::input('descricao');
         $quantidade = Request::input('quantidade');
         // salvar no banco de dados
         // retornar alguma view
         // $all = Request::all();
         // $only = Request::only('nome', 'valor', '...');
         // return implode( ', ', array($nome, $descricao, $valor, $quantidade));
-        DB::insert('insert into produtos (nome, quantidade, valor, descricao) values (?,?,?,?)',array($nome, $valor, $descricao, $quantidade));
+        // DB::insert('insert into produtos (nome, valor, descricao, quantidade) values (?,?,?,?)',array($nome, $valor, $descricao, $quantidade));
+        DB::table('produtos')->insert([ 'nome' => $nome, 'valor' => $valor, 'descricao' => $descricao, 'quantidade' => $quantidade ]);
+        return view('produto.adicionado')->with('nome', $nome);
     }
 
 }

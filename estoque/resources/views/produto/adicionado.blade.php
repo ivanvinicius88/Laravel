@@ -1,7 +1,13 @@
-
-
 @extends('layout.principal')
 
 @section('conteudo')
-   
-    <div class="alert alert-success"> Sucesso Ao Adicionar O Novo Produto: {{$prnome}} </div>
+
+<br>
+<div class="container">
+    <div class="alert alert-success">
+        <b>O produto {{$nome}} foi adicionado com sucesso!</b>
+    </div>
+</div>
+
+
+@stop
