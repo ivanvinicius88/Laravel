@@ -36,7 +36,8 @@ class ProdutoController extends Controller {
         // retornar alguma view
         // $all = Request::all();
         // $only = Request::only('nome', 'valor', '...');
-        return implode( ', ', array($nome, $descricao, $valor, $quantidade));
+        // return implode( ', ', array($nome, $descricao, $valor, $quantidade));
+        DB::insert('insert into produtos (nome, quantidade, valor, descricao) values (?,?,?,?)',array($nome, $valor, $descricao, $quantidade));
     }
 
 }
